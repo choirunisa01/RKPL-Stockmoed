@@ -48,11 +48,6 @@
 				                        </div>
 				                        <div class="tombol btn-group justify-content-center">
 				                            <button type="submit" name="login" class="text-white margin fw-bold form-control btn-lg mt-3" style="background-color: #032D23">Login</button>
-                                    @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
 				                        </div>
 				                    </form>
 				                </div>
