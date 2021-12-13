@@ -7,6 +7,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
     <title>@yield('title')</title>
     <title>Home</title>
     <style>
@@ -18,42 +21,35 @@
         <div class="wrapper">
             <div  class="sidebar">
                 <div id="box-satu" class= "profile">
-                    <img src="/img/profile.png" alt="">
-                    <h3>Mahmudin</h3>
-                    <p>Admin</p>
+                    <img src="/img/profile.png" alt="profil">
+                    <h3>{{ Auth::user()->name }}</h3>
                 </div>
                 
                 <ul>
                     <li>
-                        <a href="/home" class="">
+                        <a href="{{ url('/home') }}" class="">
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span class="item">Home</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="/notif" >
+                        <a href="{{ url('/notif') }}" >
                             <span class="icon"><i class="fas fa-bell"></i></span>
                             <span class="item">Notification</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="/viewStock">
+                        <a href="{{ url('/viewStock') }}">
                             <span class="icon"><i class="fas fa-eye"></i></span>
                             <span class="item">View Stock</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/create">
+                        <a href="{{ url('/create') }}">
                             <span class="icon"><i class="fas fa-plus-circle"></i></span>
                             <span class="item">Create Stock</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" >
-                            <span class="icon"><i class="fas fa-edit"></i></span>
-                            <span class="item">Update & Delete</span>
                         </a>
                     </li>
                     <li>
@@ -68,7 +64,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/" >
+                        <a href="{{ url('/') }}" >
                             <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                             <span class="item">Logout</span>
                         </a>

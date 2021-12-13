@@ -2,7 +2,7 @@
 @section('title','Notification')
 
 @section('isi')
-    <div id="box-dua" class="artikel" >
+    <div id="box-dua" class="artikel" style="text-align : center;" >
         <h3>Notification Center</h3>
     </div>
 
